@@ -341,6 +341,19 @@ import plotly.graph_objects as go
 
 import matplotlib.pyplot as plt
 
+# Create a custom layout
+custom_layout = go.Layout(
+    paper_bgcolor='white',
+    plot_bgcolor='white',
+    xaxis=dict(
+        showgrid=True,
+        gridcolor='lightgray'),
+    yaxis=dict(
+        showgrid=True,
+        gridcolor='lightgray'
+    )
+)
+
 # Create and register the template
 custom_template = go.layout.Template(layout=custom_layout)
 pio.templates["white_clean_log"] = custom_template
